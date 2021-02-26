@@ -1,0 +1,30 @@
+.blog-skew-wrapper{
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+}
+
+.blog-skew-wrapper .skew{
+    width: 60%;
+    transform: skewY(5deg);
+    position: absolute;
+    height: 200px;
+}
+.blog-skew-wrapper .left{
+    background-color: rgb(54, 54, 54);
+    left: 0;
+}
+
+
+.blog-skew-wrapper .right{
+    background-color: rgb(83, 83, 83);
+    right: 0;
+}
+
+.blog-skew-wrapper h1{
+    position: absolute;
+    margin-top: 80px;
+    left: 50%;
+    margin-left: -25px;
+    color: white;
+}

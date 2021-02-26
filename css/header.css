@@ -1,0 +1,150 @@
+header{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+}
+.eye-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    width: 60px;
+    margin-left: -30px;
+    background-color: rgb(255, 255, 255);
+    height: 90px;
+    border-radius: 30px;
+    z-index: -1;
+}
+.eye{
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    width: 40px;
+    margin-left: -20px;
+    background-color: rgb(58, 58, 58);
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.eye .eyeball{
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    transition: 0.1s;
+}
+
+.nav-list{
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat';
+    padding: 0px 20px;
+}
+
+.nav-menu-button{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 14.5px 10px;
+    display: none;
+
+}
+
+.nav-menu-button:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+.nav-menu-button .line{
+    width: 20px;
+    height: 3px;
+    background-color: rgb(94, 93, 93);
+    margin: 3px 10px;
+    border-radius: 1px;
+}
+
+.nav-menu-list{
+    position: fixed;
+    display: none;
+    top: 20%;
+    z-index: 999;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 0 5px 0;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.137);
+}
+
+.nav-menu-list .nav-menu-item{
+    padding: 10px 0;
+    margin: 0 5px;
+    border-radius: 15px;
+}
+
+.nav-menu-list .nav-menu-item:hover{
+    background-color: rgb(226, 226, 226);
+}
+
+
+.nav-menu-list #cancel{
+    color: red;
+    border-top: 1px solid rgb(255, 209, 209);
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.nav-menu-list a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#cover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.11);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+@media screen and (max-width:500px){
+    .nav-list{
+        display: none;
+    }
+
+
+    .nav-menu-button{
+        display: block;
+    }
+
+    
+    .nav-menu-list{
+        left: 5%;
+        width: 90%;
+        margin: 0;
+    }
+
+
+    .eye-wrapper{
+        height: 0;
+        z-index: 9999;
+    }
+
+    .eye{
+        top: 10px;
+    }
+
+}

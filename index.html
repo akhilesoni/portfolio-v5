@@ -1,0 +1,107 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css//introduction.css">
+        <link rel="stylesheet" href="css//project.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <title>Akhilesoni</title>
+    </head>
+    <body>
+        <header id="header">
+            <div class="nav-list">
+                <a href="#introduction">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="">Blog</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </div>
+            <div class="eye-wrapper">
+                <div class="eye">
+                    <div id="eyeball" class="eyeball"></div>
+                </div>
+            </div>
+            <div id="nav-menu-button" class="nav-menu-button">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </header>
+        
+
+
+        <div id="introduction-background" class="introduction-background">
+
+        </div>
+        
+        <div id="introduction" class="introduction">
+            <img class="profile-photo" src="css/images/mypic.jpeg" height="140" width="140" alt="">
+            <h1>Hi! I'm Akhlesh Soni</h1>
+            <p>more about me later</p>
+            <a href="" class="fa fa-linkedin"></a>
+            <a href="" class="fa fa-instagram"></a>
+            <a href="" class="fa fa-github"></a>
+            <a href="" class="fa fa-twitter"></a>
+        </div>
+
+        <div class="skew-wrapper">
+            <div class="left skew"></div>
+            <div class="right skew"></div>
+            <h1 class="project-heading">Projects</h1>
+        </div>
+
+        <div id="projects" class="projects">
+            <div class="project">
+                <h1>GharGrocery</h1>
+                <p>a grocery app</p>
+                <img src="css/images/ghargrocery.png" alt="" height="400px">
+            </div>
+            <div class="project">
+                <h1>DSC SSTC</h1>
+                <p>a dsc community app</p>
+                <img src="css/images/dsc.png" alt="" height="400px">
+            </div>
+            <div class="project">
+                <h1>AskQ</h1>
+                <p>an app for people in need</p>
+                <img class="askq image" src="css/images/askq.png" alt="" height="400">
+            </div>
+        </div>
+
+
+        <div class="cover" id="cover"></div>
+        <div id="nav-menu-list" class="nav-menu-list">
+            <div class="nav-menu-item"><a href="#introduction">Home</a></div>
+            <div class="nav-menu-item"><a href="#projects">Projects</a></div>
+            <div class="nav-menu-item"><a href="">Blog</a></div>
+            <div class="nav-menu-item"><a href="">About</a></div>
+            <div class="nav-menu-item"><a href="">Contact</a></div>
+            <div id="cancel" class="nav-menu-item">Cancel</div>
+        </div>
+
+        <script src="javascript/header.js">
+        </script>
+        <script src="javascript/introduction.js"></script>
+        <script>
+            anime({
+                targets:'.introduction',
+                opacity:[0,0,1],
+                translateX:[-100,0],
+                delay:200,
+                duration:500,
+                loop:false,
+                easing:'linear',
+                autoplay:true
+            })
+        </script>
+    </body>
+</html>

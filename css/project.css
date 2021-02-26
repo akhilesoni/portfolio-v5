@@ -1,0 +1,32 @@
+.projects{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects .project{
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.164);
+    margin: 10px auto 20px auto;
+    padding: 20px 20px 0px 20px ;
+}
+
+.project h1{
+    margin-bottom: 5px;
+}
+
+.project p{
+    margin-top: 0;
+    color: rgb(80, 80, 80);
+}
+
+@media screen and (max-width:500px){
+    .projects .project{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+
+    }
+}

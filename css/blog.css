@@ -28,3 +28,50 @@
     margin-left: -25px;
     color: white;
 }
+
+
+.blogs{
+    margin-top: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.blogs .blog{
+    width: 300px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.137);
+    margin:20px auto ;
+    height: fit-content;
+
+}
+
+.blog .blog-img{
+    width: 100%;
+}
+
+.blog h3{
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.blog p{
+    margin: 0 10px 10px 10px;
+    color: rgb(94, 94, 94);
+    text-decoration: none;
+}
+
+.blog a{
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:500px){
+    .blogs .blog{
+        width: 90%;
+        margin: 10px 5% 10px 5%;
+    }
+}

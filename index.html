@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/blog.css">
         <link rel="stylesheet" href="css/about.css">
         <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/splash.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
@@ -24,9 +25,9 @@
             <div class="nav-list">
                 <a href="#introduction">Home</a>
                 <a href="#projects">Portfolio</a>
-                <a href="">Blog</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
+                <a href="#blog">Blog</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
             <div class="eye-wrapper">
                 <div class="eye">
@@ -50,10 +51,10 @@
             <img class="profile-photo" src="css/images/mypic.jpeg" height="140" width="140" alt="">
             <h1>Hi! I'm Akhlesh Soni</h1>
             <p>more about me later</p>
-            <a href="" class="fa fa-linkedin"></a>
-            <a href="" class="fa fa-instagram"></a>
-            <a href="" class="fa fa-github"></a>
-            <a href="" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com/in/akhlesh-soni-590b46187/" class="fa fa-linkedin"></a>
+            <a href="https://www.instagram.com/akhilesoni/" class="fa fa-instagram"></a>
+            <a href="https://github.com/akhilesoni" class="fa fa-github"></a>
+            <a href="https://twitter.com/Akhilesoni" class="fa fa-twitter"></a>
         </div>
 
         <div class="skew-wrapper">
@@ -83,11 +84,12 @@
                 <div class="project-heading">
                     <h1>AskQ</h1>
                     <p>an app for people in need</p>
+                    <a href="http://ask-q.herokuapp.com/">Visit website</a>
                 </div>
             </div>
         </div>
 
-        <div class="blog-skew-wrapper">
+        <div id="blog" class="blog-skew-wrapper">
             <div class="right skew"></div>
             <div class="left skew"></div>
             <h1>Blogs</h1>
@@ -95,14 +97,14 @@
         <div id="blogs" class="blogs">
             <div class="blog">
                 <a href="">
-                    <img class="blog-img" src="css/images/android-blog-img.png" alt="">
+                    <img class="blog-img" src="css/images/android.png" alt="">
                     <h3>Android beginner</h3>
                     <p>your first android app</p>
                 </a>
             </div>
             <div class="blog">
                 <a href="">
-                    <img class="blog-img" src="css/images/webfullstack.png" alt="">
+                    <img class="blog-img" src="css/images/fullstack.png" alt="">
                     <h3>Full Stack Web Development</h3>
                     <p>A complete guide for full stack</p>
                 </a>
@@ -117,11 +119,11 @@
             <h1>About</h1>
         </div>
 
-        <div class="about">
+        <div id="about" class="about">
             <div class="about-me">
                 <img class="profile-photo" src="css/images/mypic.jpeg" height="140" width="140" alt="">
                 <h1>Hi! I'm Akhlesh Soni</h1>
-                <p>more about me later</p>
+                <p>I'm a computer science 3rd year student. I love coding and frontend designing, I also love mentoring people based om their question and last but not least I love teaching programmimg so if you are willing to learn programmimg I can help you with that.</p>
             </div>
             <div class="wrapper">
                     <h2>Skills </h2>
@@ -139,7 +141,9 @@
             <h1>Mail Me</h1>
         </div>
 
-        <div class="contact">
+        <div id="contact" class="contact">
+            <img class="wing wingleft" src="css/images/left-wing.png" alt="">
+            <img class="wing wingright" src="css/images/right-wing.png" alt="">
             <div id="mail" class="mail">
                 <div class="wrapper">
                     <div class="left skew"></div>
@@ -155,16 +159,24 @@
         <div id="nav-menu-list" class="nav-menu-list">
             <div class="nav-menu-item"><a href="#introduction">Home</a></div>
             <div class="nav-menu-item"><a href="#projects">Portfolio</a></div>
-            <div class="nav-menu-item"><a href="">Blog</a></div>
-            <div class="nav-menu-item"><a href="">About</a></div>
-            <div class="nav-menu-item"><a href="">Contact</a></div>
+            <div class="nav-menu-item"><a href="#blog">Blog</a></div>
+            <div class="nav-menu-item"><a href="#about">About</a></div>
+            <div class="nav-menu-item"><a href="#contact">Contact</a></div>
             <div id="cancel" class="nav-menu-item">Cancel</div>
         </div>
-
+        <div id="splash-screen" class="splash-screen">
+            <div class="progressbar"></div>
+        </div>
         <script src="javascript/header.js">
         </script>
         <script src="javascript/introduction.js"></script>
         <script>
+            var splash = document.getElementById('splash-screen');
+            window.onload = ()=>{
+                setTimeout(()=>{
+                    splash.style.display = 'none';
+                },1000)
+            }
             anime({
                 targets:'.introduction',
                 opacity:[0,0,1],
@@ -187,6 +199,24 @@
                 autoplay:false
             })
 
+            var leftflap = anime({
+                targets:'.contact .wingleft',
+                perspective:'1000px',
+                rotateY:['0deg','40deg','0deg','40deg','0deg','40deg','0deg'],
+                duration:1000,
+                loop:false,
+                easing:'linear',
+                autoplay:false
+            })
+            var rightflap = anime({
+                targets:'.contact .wingright',
+                perspective:'1000px',
+                rotateY:['0deg','-40deg','0deg','-40deg','0deg','-40deg','0deg'],
+                duration:1000,
+                loop:false,
+                easing:'linear',
+                autoplay:false
+            })
 
             var send = document.getElementById('send-button');
             var mail = document.getElementById('mail');
@@ -196,6 +226,21 @@
                 send.innerText= "redirecting to mail....";
                 location.replace("mailto:soniakhilesh101@gmail.com");
             })
+            mail.addEventListener('mousemove',()=>{
+                leftflap.play();
+                rightflap.play();
+            })
+
+            anime({
+                targets:'.progressbar',
+                rotate:'360deg',
+                duration:1000,
+                loop:true,
+                easing:'linear',
+                autoplay:true
+            })
+
+            
         </script>
     </body>
 </html>

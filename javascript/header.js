@@ -9,6 +9,10 @@ nav_menu_button.addEventListener('click',()=>{
     nav_menu_list.style.display = 'block';
     cover.style.display = 'block';
 })
+nav_menu_list.addEventListener('click',()=>{
+    nav_menu_list.style.display = 'none';
+    cover.style.display = 'none';
+})
 
 cover.addEventListener('click',()=>{
     nav_menu_list.style.display = 'none';

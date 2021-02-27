@@ -37,6 +37,7 @@
 
 .contact{
     margin-top: 250px;
+    position: relative;
 }
 
 .contact .mail{
@@ -55,7 +56,7 @@
 }
 
 .mail .skew{
-    background-color: rgba(255, 0, 0, 0.658);
+    background-color: rgba(0, 0, 0, 0.281);
     height: 50px;
     width: 50%;
     margin-top: 45px;
@@ -73,7 +74,7 @@
     width: 50px;
     height: 100%;
     position: absolute;
-    background-color: rgba(255, 0, 0, 0.658);
+    background-color: rgba(0, 0, 0, 0.281);
     top: 0;
 }
 
@@ -89,7 +90,7 @@
 .send-button{
     width: fit-content;
     margin: 30px auto;
-    background-color:rgb(255, 0, 0) ;
+    background-color:rgb(48, 48, 48) ;
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
@@ -100,4 +101,32 @@
 .send-button:hover{
     transform: scale(1.05);
     box-shadow: 10px 10px rgba(0, 0, 0, 0.349);
+}
+
+.contact .wing{
+    position: absolute;
+    height: 400px;
+  top: -80px;
+}
+
+.contact .wingleft{
+    left: 0;
+}
+
+.contact .wingright{
+    right: 0;
+}
+@media screen and (max-width:500px){
+    .contact .mail{
+        width: 90%;
+        margin: 20px 5% 10px 5%;
+        height: 200px;
+    }
+    .mail .skew{
+        margin-top: 20px;
+    }
+
+    .wing{
+        display: none;
+    }
 }

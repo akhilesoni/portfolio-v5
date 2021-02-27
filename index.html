@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/project.css">
         <link rel="stylesheet" href="css/blog.css">
         <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/contact.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
@@ -22,7 +23,7 @@
         <header id="header">
             <div class="nav-list">
                 <a href="#introduction">Home</a>
-                <a href="#projects">Projects</a>
+                <a href="#projects">Portfolio</a>
                 <a href="">Blog</a>
                 <a href="">About</a>
                 <a href="">Contact</a>
@@ -74,6 +75,7 @@
                 <div class="project-heading">
                     <h1>DSC SSTC</h1>
                     <p>an app for dsc sstc</p>
+                    
                 </div>
             </div>
             <div class="project">
@@ -115,10 +117,44 @@
             <h1>About</h1>
         </div>
 
+        <div class="about">
+            <div class="about-me">
+                <img class="profile-photo" src="css/images/mypic.jpeg" height="140" width="140" alt="">
+                <h1>Hi! I'm Akhlesh Soni</h1>
+                <p>more about me later</p>
+            </div>
+            <div class="wrapper">
+                    <h2>Skills </h2>
+                    <p>I have good understanding and skill of frontent as well as backend on python and node</p>
+                    <p>here's my resume</p>
+                    <a href="">download resume</a>
+            </div>
+        </div>
+
+
+        
+        <div class="contact-skew-wrapper">
+            <div class="left skew"></div>
+            <div class="right skew"></div>
+            <h1>Mail Me</h1>
+        </div>
+
+        <div class="contact">
+            <div id="mail" class="mail">
+                <div class="wrapper">
+                    <div class="left skew"></div>
+                    <div class="right skew"></div>
+                </div>
+                <div class="line one"></div>
+                <div class="line two"></div>
+            </div>
+            <h3 id="send-button" class="send-button">send a mail</h3>
+        </div>
+
         <div class="cover" id="cover"></div>
         <div id="nav-menu-list" class="nav-menu-list">
             <div class="nav-menu-item"><a href="#introduction">Home</a></div>
-            <div class="nav-menu-item"><a href="#projects">Projects</a></div>
+            <div class="nav-menu-item"><a href="#projects">Portfolio</a></div>
             <div class="nav-menu-item"><a href="">Blog</a></div>
             <div class="nav-menu-item"><a href="">About</a></div>
             <div class="nav-menu-item"><a href="">Contact</a></div>
@@ -138,6 +174,27 @@
                 loop:false,
                 easing:'linear',
                 autoplay:true
+            })
+
+            var mailed = anime({
+                targets:'.mail',
+                scale:[1,1,0.3,0],
+                perspective:'1000px',
+                rotateX:'70deg',
+                duration:1000,
+                loop:false,
+                easing:'linear',
+                autoplay:false
+            })
+
+
+            var send = document.getElementById('send-button');
+            var mail = document.getElementById('mail');
+
+            send.addEventListener('click',()=>{
+                mailed.play();
+                send.innerText= "redirecting to mail....";
+                location.replace("mailto:soniakhilesh101@gmail.com");
             })
         </script>
     </body>

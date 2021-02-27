@@ -44,3 +44,57 @@
     color: white;
     margin-left: -47px;
 }
+
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 330px auto auto auto;
+    background-color: white;
+}
+.about .about-me{
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px auto;
+    
+}
+
+.about-me .profile-photo{
+    border-radius: 50%;
+}
+
+
+
+
+.about .wrapper{
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+}
+
+
+.about .wrapper h2 {
+    margin: 0;
+}
+.about .wrapper p{
+ margin: 0;
+ color: rgba(0, 0, 0, 0.74);
+}
+
+
+@media screen and (max-width:500px){
+    .about .about-me{
+        width: 90%;
+        margin: 20px 5%;
+    }
+
+    .about .wrapper{
+        width: 90%;
+        margin: 20px 5%;
+    }
+
+}

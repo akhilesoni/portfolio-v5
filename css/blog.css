@@ -31,9 +31,10 @@
 
 
 .blogs{
-    margin-top: 400px;
+    margin: 400px auto auto auto ;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 
@@ -41,11 +42,15 @@
     width: 300px;
     overflow: hidden;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.137);
-    margin:20px auto ;
+    margin:20px 20px ;
     height: fit-content;
+    transition: 0.2s;
 
+}
+
+.blogs .blog:hover{
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.178);
+    transform: scale(1.01);
 }
 
 .blog .blog-img{

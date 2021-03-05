@@ -1,7 +1,7 @@
 .blog-skew-wrapper{
     width: 100%;
     position: relative;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .blog-skew-wrapper .skew{
@@ -31,7 +31,7 @@
 
 
 .blogs{
-    margin: 400px auto auto auto ;
+    margin: 500px auto auto auto ;
     display: flex;
     flex-wrap: wrap;
     width: fit-content;

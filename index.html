@@ -76,7 +76,6 @@
                 <div class="project-heading">
                     <h1>DSC SSTC</h1>
                     <p>an app for dsc sstc</p>
-                    
                 </div>
             </div>
             <div class="project">
@@ -96,14 +95,14 @@
         </div>
         <div id="blogs" class="blogs">
             <div class="blog">
-                <a href="">
+                <a href="https://akhilesoni.blogspot.com/2021/01/how-to-build-your-first-android-app.html">
                     <img class="blog-img" src="css/images/android.png" alt="">
                     <h3>Android beginner</h3>
                     <p>your first android app</p>
                 </a>
             </div>
             <div class="blog">
-                <a href="">
+                <a href="https://akhilesoni.blogspot.com/2021/02/full-stack-web-development.html">
                     <img class="blog-img" src="css/images/fullstack.png" alt="">
                     <h3>Full Stack Web Development</h3>
                     <p>A complete guide for full stack</p>
@@ -129,7 +128,7 @@
                     <h2>Skills </h2>
                     <p>I have good understanding and skill of frontent as well as backend on python and node</p>
                     <p>here's my resume</p>
-                    <a href="">download resume</a>
+                    <a href="resume.html">download resume</a>
             </div>
         </div>
 
@@ -164,9 +163,11 @@
             <div class="nav-menu-item"><a href="#contact">Contact</a></div>
             <div id="cancel" class="nav-menu-item">Cancel</div>
         </div>
+
         <div id="splash-screen" class="splash-screen">
             <div class="progressbar"></div>
         </div>
+        <script src="javascript/windowload.js"></script>
         <script src="javascript/header.js">
         </script>
         <script src="javascript/introduction.js"></script>
@@ -177,6 +178,21 @@
                     splash.style.display = 'none';
                 },1000)
             }
+
+            var projects = document.getElementById('projects')
+
+            window.addEventListener('scroll',()=>{
+                if(window.scrollY == window.screen.height){
+                    projectapper.play();
+                }
+                else if(window.scrollY<window.screen.height){
+                    projects.style.opacity = 0;
+                }
+                else{
+                    projects.style.opacity = 1;
+                }
+            })
+           
             anime({
                 targets:'.introduction',
                 opacity:[0,0,1],
@@ -187,6 +203,19 @@
                 easing:'linear',
                 autoplay:true
             })
+
+            var projectapper = anime({
+                targets:'.projects',
+                opacity:[0,1],
+                translateY:[100,0],
+                duration:1000,
+                loop:false,
+                easing:'linear',
+                autoplay:false
+            })
+
+            
+            
 
             var mailed = anime({
                 targets:'.mail',

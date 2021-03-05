@@ -19,3 +19,9 @@
     border-top: 10px solid black;
     border-radius: 50%;
 }
+
+.meter{
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}

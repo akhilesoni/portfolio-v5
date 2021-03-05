@@ -1,6 +1,6 @@
 .projects{
     margin-top: 100px;
-  
+    transition: 0.3s;
 }
 
 .projects .project{
@@ -13,6 +13,7 @@
     overflow: hidden;
     transition: 0.8s;
     height: 90%;
+    padding-bottom: 20px;
 }
 
 

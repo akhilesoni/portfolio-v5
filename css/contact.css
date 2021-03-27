@@ -104,6 +104,11 @@
     border-radius: 10px;
     transition: 0.1s;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.contact a{
+    text-decoration: none;
 }
 
 .send-button:hover{

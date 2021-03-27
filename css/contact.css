@@ -38,6 +38,7 @@
 .contact{
     margin-top: 250px;
     position: relative;
+    overflow: hidden;
 }
 
 .contact .mail{

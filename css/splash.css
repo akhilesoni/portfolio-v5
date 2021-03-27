@@ -16,6 +16,7 @@
     left: 50%;
     margin-left: -50px;
     margin-top: -50px;
+    border:7px solid rgb(207, 207, 207) ;
     border-top: 10px solid black;
     border-radius: 50%;
 }

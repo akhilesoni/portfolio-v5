@@ -54,10 +54,16 @@
             <img class="profile-photo" src="css/images/mypic.jpeg" height="140" width="140" alt="">
             <h1>Hi! I'm Akhlesh Soni</h1>
             <p>more about me later</p>
-            <a href="https://www.linkedin.com/in/akhlesh-soni-590b46187/" class="fa fa-linkedin"></a>
-            <a href="https://www.instagram.com/akhilesoni/" class="fa fa-instagram"></a>
-            <a href="https://github.com/akhilesoni" class="fa fa-github"></a>
-            <a href="https://twitter.com/Akhilesoni" class="fa fa-twitter"></a>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/akhlesh-soni-590b46187/" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/akhilesoni/" class="fa fa-instagram"></a>
+                <a href="https://github.com/akhilesoni" class="fa fa-github"></a>
+                <a href="https://twitter.com/Akhilesoni" class="fa fa-twitter"></a>
+            </div>
+            <div class="work">
+                <a href="https://www.fiverr.com/akhlesoni?up_rollout=true">Fiverr</a>
+                <a href="resume.html">Resume</a>
+            </div>
         </div>
 
         <div class="skew-wrapper">
@@ -146,20 +152,16 @@
         </div>
 
         <div id="contact" class="contact">
-            <img class="wing wingleft" src="css/images/left-wing.png" alt="">
-            <img class="wing wingright" src="css/images/right-wing.png" alt="">
-            <div id="mail" class="mail">
-                <div class="wrapper">
-                    <div class="left skew"></div>
-                    <div class="right skew"></div>
-                </div>
-                <div class="line one"></div>
-                <div class="line two"></div>
-            </div>
-            <a href="mailto:soniakhilesh101@gmail.com"> <h3 id="send-button" class="send-button">send a mail</h3></a>
+          
+            <img src="css/images/gear.png" alt="" class="gear one">
+            <img src="css/images/gear.png" alt="" class="gear two">
+            <img src="css/images/gear.png" alt="" class="gear three">
+            <img src="css/images/gear.png" alt="" class="gear four">
+            <a href="mailto:soniakhilesh10.com"> <h3 id="send-button" class="send-button">send a mail</h3></a>
         </div>
         <div class="footer">
-            <p>Designed by Akhlesh Soni with <span style="color: rgb(190, 0, 0);"> &#10084;</span></p>
+            <p>Designed by Akhlesh Soni with <span style="color: rgb(190, 0, 0);"> &#10084;</span> </p>
+            <p> &#10551; Bhilai, India</p>
         </div>
 
         <div class="cover" id="cover"></div>
@@ -259,14 +261,15 @@
             var mail = document.getElementById('mail');
 
             send.addEventListener('click',()=>{
-                mailed.play();
+                rotate.play()
                 send.innerText= "redirecting to mail....";
-                location.replace("mailto:soniakhilesh101@gmail.com");
+                setTimeout(()=>{
+                    location.replace("mailto:soniakhilesh101@gmail.com");
+                    rotate.pause()
+                    send.innerText= "redirected to mail!";
+                },1000)
             })
-            mail.addEventListener('mousemove',()=>{
-                leftflap.play();
-                rightflap.play();
-            })
+        
 
             anime({
                 targets:'.progressbar',
@@ -275,6 +278,15 @@
                 loop:true,
                 easing:'linear',
                 autoplay:true
+            })
+
+            var rotate =   anime({
+                targets:'.gear',
+                rotate:'360deg',
+                duration:1000,
+                loop:true,
+                easing:'linear',
+                autoplay:false
             })
 
             

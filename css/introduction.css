@@ -22,11 +22,36 @@
     border: 10px solid white;
 }
 
-.introduction a{
+.introduction .social a{
     text-decoration: none;
     color: black;
     font-size: 30px;
     padding: 20px;
+    filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.158));
+    transition: 0.3s;
+}
+
+.introduction .social a:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(8px 8px rgba(0, 0, 0, 0.158));
+}
+
+.introduction .work a{
+    color: black;
+    text-decoration: none;
+    border: 2px solid rgb(53, 53, 53);
+    padding: 10px 20px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.introduction .work a:hover{
+    background-color:rgb(53, 53, 53) ;
+    color: white;
+}
+.introduction .work{
+    margin: 10px 0;
 }
 
 .introduction-background{

@@ -24,6 +24,8 @@
         <title>Akhilesoni</title>
     </head>
     <body>
+        <div class="cover" id="cover"></div>
+
         <header id="header">
             <div class="nav-list">
                 <a href="#introduction">Home</a>
@@ -160,7 +162,6 @@
             <p> &#10551; Bhilai, India</p>
         </div>
 
-        <div class="cover" id="cover"></div>
         <div id="nav-menu-list" class="nav-menu-list">
             <div class="nav-menu-item"><a href="#introduction">Home</a></div>
             <div class="nav-menu-item"><a href="#projects">Portfolio</a></div>
@@ -186,7 +187,7 @@
             }
 
             var projects = document.getElementById('projects')
-
+            var nav_menu_button = document.getElementById('nav-menu-button');
             window.addEventListener('scroll',()=>{
                 if(window.scrollY == window.screen.height){
                     projectapper.play();
@@ -197,6 +198,10 @@
                 else{
                     projects.style.opacity = 1;
                 }
+            })
+
+            nav_menu_button.addEventListener('click',()=>{
+                fade_in.play();
             })
            
             anime({
@@ -221,7 +226,14 @@
             })
 
             
-            
+            var fade_in = anime({
+                targets:'.nav-menu-list, .cover',
+                opacity:[0,1],
+                duration:200,
+                loop:false,
+                easing:'linear',
+                autoplay:false
+            })
 
             var mailed = anime({
                 targets:'.mail',
